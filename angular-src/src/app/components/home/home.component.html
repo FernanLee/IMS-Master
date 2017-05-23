@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+   <h1>IMS</h1>
+   <p class="lead">Welcome to OASIS Hospital Incident Management System built on Angular 2</p>
+   <div>
+     <a class="btn btn-primary" *ngIf="!authService.loggedIn()" [routerLink]="['/register']">Register</a>
+     <a class="btn btn-default" *ngIf="!authService.loggedIn()" [routerLink]="['/login']">Login</a>
+   </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h5> Node, Express and Mongoose Backend </h5>
+    <p> A new tech stack </p>
+  </div>
+  <div class="col-md-4">
+    <h5> Angular CLI </h5>
+    <p> Angular CLI for generating component </p>
+  </div>
+  <div class="col-md-4">
+    <h5> JWT Token </h5>
+    <p> JSON web token </p>
+  </div>
+</div>

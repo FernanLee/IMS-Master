@@ -1,0 +1,59 @@
+
+<form (submit)="onNewIncident()">
+<div  *ngIf="user" class="container">
+    <br>
+	<div class="row">    
+	    <div class="col-md-10">       
+            <div class="card hovercard">
+                <div class="cardheader">
+                </div>
+                <div class="avatar">
+                    <img alt="" src="http://lorempixel.com/50/50/" class="img-circle">                       
+                </div>
+                <div class="info">                
+                    <div class="desc">User Name: {{user.username}}</div>
+                    <div class="desc">eMail: {{user.email}}</div>
+                    <div class="desc"></div>
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com/">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com/">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/">
+                        <i class="fa fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+              <div class="col-md-2">     
+                <input type="submit"class="btn btn-danger btn-sm" value="+New Incident">    
+              </div>
+	</div>
+  <hr>
+
+
+	<div class="row">
+          <div class="col-md-12">             
+          <!-- <h4>Incidents</h4> -->
+          <ul class="nav nav-tabs">
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = {exact:true} class="" ><a  [routerLink]="['/incidentrecent']" data-toggle="tab" aria-expanded="true">Recent <span class="badge"> 5 </span></a></li>
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = {exact:true} class=""><a [routerLink]="['/incidentreview']" data-toggle="tab" aria-expanded="false">Needs Review <span class="badge"> 3 </span></a></li>
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = {exact:true} class=""><a [routerLink]="['/incidenthistory']" data-toggle="tab" aria-expanded="false">Archives <span class="badge"> 4 </span></a></li>
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = {exact:true} class=""><a [routerLink]="['/incidentreport']" data-toggle="tab" aria-expanded="false">Reports</a></li>  
+          </ul>         
+          </div>       
+        
+	  </div>
+
+  </div>
+</form>
+
+  
